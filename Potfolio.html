@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abir Saha's Portfolio</title>
+    <!-- Use Tailwind CSS for easy styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use the 'Inter' font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply a custom font family to the entire page */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-image: url(Galaxy.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Keeps the background static when scrolling */
+        }
+
+        /* For a subtle animation on hover on cards */
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Initial state for elements before animation */
+        .animated-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        /* Final state for animated elements */
+        .animated-section.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="text-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <!-- Main content container, centered and responsive -->
+    <main id="main-content" class="w-full max-w-4xl mx-auto bg-gray-900/50 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-2xl space-y-10 border border-gray-700/50">
+
+        <!-- Header section with name and title -->
+        <header class="text-center space-y-2 animated-section">
+            <div class="w-24 h-24 mx-auto rounded-full bg-gray-700/50 border-2 border-gray-600/50 flex items-center justify-center text-4xl">
+                <!-- Profile picture placeholder -->
+                <span class="text-gray-400">A.S.</span>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-wide">Abir Saha</h1>
+            <p class="text-lg md:text-xl font-light text-gray-300">Computer Science Undergraduate</p>
+        </header>
+
+        <!-- About Me section -->
+        <section class="space-y-4 animated-section">
+            <h2 class="text-2xl md:text-3xl font-bold text-white border-b border-gray-700 pb-2">About Me</h2>
+            <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+                Curious and driven Computer Science undergraduate with strong skills in data structures, algorithms, and problem-solving. Passionate about building real-world solutions by combining AI with intuitive web interfaces. Experienced in backend logic and intelligent systems, from recommendation engines to real-time computer vision. Comfortable with both code and concepts, and eager to contribute to impactful software in performance-focused, innovation-driven environments.
+            </p>
+        </section>
+
+        <!-- Education section -->
+        <section class="space-y-4 animated-section">
+            <h2 class="text-2xl md:text-3xl font-bold text-white border-b border-gray-700 pb-2">Education</h2>
+            <div class="space-y-4">
+                <div class="p-4 bg-gray-800/60 rounded-xl">
+                    <h3 class="text-lg font-semibold text-white">RCC INSTITUTE OF INFORMATION TECHNOLOGY</h3>
+                    <p class="text-gray-300">Bachelor of Technology, Computer Science and Engineering</p>
+                    <p class="text-gray-400 text-sm">CGPA: 7.8/10</p>
+                    <p class="text-gray-400 text-sm">Sep 2022 - June 2026</p>
+                </div>
+                <div class="p-4 bg-gray-800/60 rounded-xl">
+                    <h3 class="text-lg font-semibold text-white">INDIAN INSTITUTE OF TECHNOLOGY MADRAS</h3>
+                    <p class="text-gray-300">Bachelor of Science (B.Sc.), Data Science and Application</p>
+                    <p class="text-gray-400 text-sm">CGPA: 8.4/10</p>
+                    <p class="text-gray-400 text-sm">Sep 2023 - Sep 2027</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills section -->
+        <section class="space-y-4 animated-section">
+            <h2 class="text-2xl md:text-3xl font-bold text-white border-b border-gray-700 pb-2">Skills</h2>
+            <div class="space-y-4">
+                <div class="p-4 bg-gray-800/60 rounded-xl">
+                    <h3 class="text-lg font-semibold text-white mb-2">Languages</h3>
+                    <p class="text-gray-300">Python, Java, JavaScript, SQL, C, HTML/CSS, PHP</p>
+                </div>
+                <div class="p-4 bg-gray-800/60 rounded-xl">
+                    <h3 class="text-lg font-semibold text-white mb-2">Technologies & Frameworks</h3>
+                    <p class="text-gray-300">Pandas, NumPy, PyTorch, ReactJS, TensorFlow, Keras, Flask, Django, Vuejs, Nestjs</p>
+                </div>
+                <div class="p-4 bg-gray-800/60 rounded-xl">
+                    <h3 class="text-lg font-semibold text-white mb-2">Tools & Libraries</h3>
+                    <p class="text-gray-300">OpenCV, SciKitLearn, Matplotlib, Git, Tkinter, PIL, SQLite, Streamlit, GCP</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects section -->
+        <section class="space-y-4 animated-section">
+            <h2 class="text-2xl md:text-3xl font-bold text-white border-b border-gray-700 pb-2">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Bhukamp - Earthquake Analysis and Prediction -->
+                <a href="https://bhukamp-prajnyan.streamlit.app/" class="card-hover block p-6 bg-gray-800/60 rounded-xl transition-transform duration-300 ease-in-out hover:scale-[1.02]" target="_blank">
+                    <img src="Bhukamp-prajnyan.jpeg" alt="Screenshot of Bhukamp project" class="rounded-lg mb-4 w-full h-auto object-cover">
+                    <h3 class="text-xl font-semibold text-white mb-2">Bhukamp - Earthquake Analysis and Prediction</h3>
+                    <p class="text-gray-400 text-sm">Collaborated on an ML-based earthquake susceptibility prediction system using geospatial data and developed a Streamlit app for live prediction and visualization.</p>
+                </a>
+
+                <!-- KnowBuy - E-Commerce System -->
+                <a href="https://know-buy.onrender.com/" class="card-hover block p-6 bg-gray-800/60 rounded-xl transition-transform duration-300 ease-in-out hover:scale-[1.02]" target="_blank">
+                    <img src="Know-Buy.png" alt="Screenshot of KnowBuy project" class="rounded-lg mb-4 w-full h-auto object-cover">
+                    <h3 class="text-xl font-semibold text-white mb-2">KnowBuy - E-Commerce System</h3>
+                    <p class="text-gray-400 text-sm">An AI-driven multi-agent system for automating product recommendations using browsing behavior, purchase history, sentiment scores, and product similarity.</p>
+                </a>
+                
+                <!-- Traffic Surveillance using OpenCV -->
+                <a href="https://www.kaggle.com/code/abirsaha2307/traffic-anomaly-detection-and-reporting" class="card-hover block p-6 bg-gray-800/60 rounded-xl transition-transform duration-300 ease-in-out hover:scale-[1.02]" target="_blank">
+                    <img src="traffic-anomaly-detection-and-reporting.jpg" alt="Screenshot of Traffic Surveillance project" class="rounded-lg mb-4 w-full h-auto object-cover">
+                    <h3 class="text-xl font-semibold text-white mb-2">Traffic Surveillance using OpenCV</h3>
+                    <p class="text-gray-400 text-sm">Implemented real-time lane detection and tracking using OpenCV and NumPy as part of a traffic anomaly detection and reporting project.</p>
+                </a>
+
+                <!-- Website for finding affordable Paying guest houses -->
+                <a href="https://github.com/Abir2307/WEB_DEV_Project_PGLIFE" class="card-hover block p-6 bg-gray-800/60 rounded-xl transition-transform duration-300 ease-in-out hover:scale-[1.02]" target="_blank">
+                    <img src="PG-Life.png" alt="Screenshot of Paying guest houses website" class="rounded-lg mb-4 w-full h-auto object-cover">
+                    <h3 class="text-xl font-semibold text-white mb-2">Website for finding affordable Paying guest houses</h3>
+                    <p class="text-gray-400 text-sm">A web development project to help users find affordable paying guest accommodations.</p>
+                </a>
+
+                <!-- Face Recognition Attendance System -->
+                <a href="https://github.com/Abir2307/Attendance-Management-System-using-Face-Recognition" class="card-hover block p-6 bg-gray-800/60 rounded-xl transition-transform duration-300 ease-in-out hover:scale-[1.02]" target="_blank">
+                    <img src="Attendance_Management_System.png" alt="Screenshot of Face Recognition project" class="rounded-lg mb-4 w-full h-auto object-cover">
+                    <h3 class="text-xl font-semibold text-white mb-2">Face Recognition Attendance System</h3>
+                    <p class="text-gray-400 text-sm">Developed and integrated real-time face detection and recognition modules using OpenCV with a Tkinter GUI.</p>
+                </a>
+                
+                 <!-- Plant Disease Detection System -->
+                <a href="https://github.com/Abir2307/Quiz_Master" class="card-hover block p-6 bg-gray-800/60 rounded-xl transition-transform duration-300 ease-in-out hover:scale-[1.02]" target="_blank">
+                    <img src="Quiz_Master.png" alt="Screenshot of Quiz Master project" class="rounded-lg mb-4 w-full h-auto object-cover">
+                    <h3 class="text-xl font-semibold text-white mb-2">Quiz Master</h3>
+                    <p class="text-gray-400 text-sm">Developed a Quiz Management application using Flask and Vuejs to create and manage quizzes.</p>
+                </a>
+
+
+            </div>
+        </section>
+
+        <!-- Links section -->
+        <section class="space-y-4 animated-section">
+            <h2 class="text-2xl md:text-3xl font-bold text-white border-b border-gray-700 pb-2">Links</h2>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+
+                <!-- Resume Link -->
+                <a href="Resume_Abir.pdf" class="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 text-white bg-blue-600 rounded-full font-medium transition-all duration-300 ease-in-out hover:bg-blue-700 hover:scale-105">
+                    <!-- SVG icon for a document -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/>
+                    </svg>
+                    Resume
+                </a>
+
+                <!-- GitHub Link -->
+                <a href="https://github.com/Abir2307" class="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 text-white bg-gray-700 rounded-full font-medium transition-all duration-300 ease-in-out hover:bg-gray-800 hover:scale-105" target="_blank">
+                    <!-- SVG icon for GitHub -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.6.111.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.542-1.368-1.325-1.737-1.325-1.737-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.111-3.176 0 0 1.006-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.006.404 2.29-1.552 3.296-1.23 3.296-1.23.656 1.653.25 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.605-.015 2.894-.015 3.286 0 .319.219.695.824.577 4.766-1.587 8.205-6.085 8.205-11.385C24 5.373 18.627 0 12 0z"/>
+                    </svg>
+                    GitHub
+                </a>
+
+                <!-- LinkedIn Link -->
+                <a href="https://linkedin.com/in/abir-saha-6801b1327/" class="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 text-white bg-blue-800 rounded-full font-medium transition-all duration-300 ease-in-out hover:bg-blue-900 hover:scale-105" target="_blank">
+                    <!-- SVG icon for LinkedIn -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                    LinkedIn
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Get the main content container
+        const mainContent = document.getElementById('main-content');
+        // Get all sections to be animated
+        const animatedSections = document.querySelectorAll('.animated-section');
+
+        // Flag to ensure the animation only runs once per page load
+        let hasAnimated = false;
+
+        // Add a mouseover event listener to the main content container
+        mainContent.addEventListener('mouseover', () => {
+            if (!hasAnimated) {
+                // Iterate through each section and apply the 'animate-in' class with a delay
+                animatedSections.forEach((section, index) => {
+                    setTimeout(() => {
+                        section.classList.add('animate-in');
+                    }, index * 150); // Delay each section's animation by 150ms
+                });
+                hasAnimated = true; // Set flag to true to prevent re-animation
+            }
+        });
+    </script>
+</body>
+</html>
